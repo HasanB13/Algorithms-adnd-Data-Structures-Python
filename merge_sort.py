@@ -2,13 +2,13 @@ import random
 
 
 
-def sort_(arr=[]):
+def mergSort(arr=[]):
 	if len(arr)<2:
 		return arr
 
 	n = len(arr)//2
-	leftArr = sort_(arr[0:n])
-	rightArr = sort_(arr[n:len(arr)])
+	leftArr = mergSort(arr[0:n])
+	rightArr = mergSort(arr[n:len(arr)])
 
 	result = []
 	i = 0
@@ -40,7 +40,7 @@ for _ in range(0,10):
 print("the array without sort :\n")
 print(a)
 print("\nthe array with sort :\n")
-sortArr = sort_(a)
+sortArr = mergSort(a)
 print(sortArr)
 
 
